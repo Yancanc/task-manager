@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+:root{
 
+
+  --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-ms: 90%;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,6 +14,10 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #F2B705;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .container {
@@ -15,15 +25,16 @@ body {
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid steelblue;
+  border: 2px solid black;
   padding: 30px;
   border-radius: 5px;
+  background: #F2F2F0;
 }
 .btn {
   display: inline-block;
-  background: #000;
+  background: #42378C;
   color: #fff;
-  border: none;
+  border: 2px solid black;
   padding: 10px 20px;
   margin: 5px;
   border-radius: 5px;
@@ -58,6 +69,8 @@ body {
   margin: 5px;
   padding: 3px 7px;
   font-size: 17px;
+  border: 2px solid black;
+  border-radius: 2px;
 }
 
 .form-control-check {
@@ -68,9 +81,24 @@ body {
 
 .form-control-check label {
   flex: 1;
+  border: 2px solid black;
 }
 
 .form-control-check input {
   flex: 2;
   height: 20px;
+  border: 2px solid black;
+}
+@media screen and (max-width:1024px) {
+  .container{
+      width: var(--container-width-md);
+  }
+
+}
+
+@media screen and (max-width:600px) {
+  .container{
+      width: var(--container-width-sm);
+  }
+
 }
